@@ -189,6 +189,10 @@ option:focus::placeholder {
   border-color: #ff3860;
 }
 @media(max-width:765px){
+  body,
+  html{
+    overflow-x: hidden;
+  }
   .form-content{
     flex-direction: column;
     gap: .5rem;
