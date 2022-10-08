@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Kinplus Technologies</a>
+            <button class="contact">Contact Us</button>
+        </nav>
+    </header>
+    <div class="form-container">
+        <form action="get">
+            <h2 class="paragraph">Trainee Feedback Form</h2>
+           <div class="form--1">
+            <div class="form-content">
+                <label for="name">Fullname</label><br>
+                <input type="text" name="name" placeholder="Enter Your Fullname" required>
+                <span class="error">**this is an error</span>
+                </div>
+                <div class="form-content">
+                   <label for="number">Phone Number</label><br>
+                   <input type="number" name="number" placeholder="Enter Your number" required>
+                   <span class="error">**this is an error</span>
+                </div>
+           </div>
+            <div class="form--1">
+                <div class="form-content">
+                    <label for="occupation">Occupation</label><br>
+                    <select name="occupation" id="occupation" required>
+                        <option value="1" disabled selected>Select an option</option>
+                        <option value="student">Student</option>
+                        <option value="corper">Corper</option>
+                        <option value="employed">Employed/Unemployed</option>
+                    </select>
+                    <span class="error">**this is an error</span>
+                </div>
+                <div class="form-content">
+                    <label for="instition">Place of Work/Instition</label><br>
+                    <input type="text" name="instition" placeholder="Enter Your instition" required>
+                    <span class="error">**this is an error</span>
+                 </div>
+            </div>
+             <div class="form--1">
+                <div class="form-content">
+                    <label for="challenges">Challenges so Far</label><br>
+                    <textarea name="challenges" id="" cols="30" rows="10" placeholder="State any challenges faced so far" required></textarea>
+                    <span class="error">**this is an error</span>
+                 </div>
+                 <div class="form-content">
+                    <label for="challenges">Area to Improve</label><br>
+                    <textarea name="challenges" id="" cols="30" rows="10" placeholder="Based on the training so far, what area do you feel we can improve on" required></textarea>
+                    <span class="error">**this is an error</span>
+                 </div>
+             </div>
+             <div class="form-content">
+                <label for="occupation">On a scale of 1-10, how will you rate the training so far</label><br>
+                <select name="occupation" id="occupation" required>
+                    <option value="0" disabled selected>Select an option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="error">**this is an error</span>
+            </div>
+             <div class="submit-con">
+                <input type="reset" value="Clear Form">
+                <input type="submit" value="Submit">
+             </div>
+        </form>
+    </div>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+   AOS.init();
+</script> 
+</body>
+</html>
