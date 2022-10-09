@@ -42,11 +42,13 @@ nav{
   color: #022144;
   border: .1rem solid #022144;
 }
-.container{
+.container-1{
   margin: 10rem auto;
+  padding: 0 10rem;
 }
 .hero{
   text-align: center;
+  max-width: 120rem;
 }
 .main-heading{
   font-size: 8rem;
@@ -161,7 +163,8 @@ select{
   padding: 2rem 1rem;
 }
 select option{
-  color: #b9b9b9;
+  color: #000;
+  background: #fff;
   text-transform: capitalize;
 }
 ::placeholder{
@@ -189,6 +192,13 @@ option:focus::placeholder {
 .error input {
   border-color: #ff3860;
 }
+
+/* media query/responsiveness */
+@media (max-width: 812px){
+  .container-1{
+    padding: 0 5rem;
+  }
+}
 @media(max-width:765px){
   body,
   html{
@@ -201,13 +211,27 @@ option:focus::placeholder {
   #pop-up{
     padding: 5rem 2rem;
   }
+  .container-1{
+    padding: 0 2rem;
+  }
+}
+@media(max-width:651px){
+  .main-heading{
+    font-size: 6rem;
+  }
+  .paragraph{
+    font-size: 2.5rem;
+  }
 }
 @media(max-width:612px){
   html{
     font-size: 55%;
   }
+  .container-1{
+    padding: 0 1rem;
+  }
   .main-heading{
-    font-size: 5rem;
+    font-size: 4rem;
     padding-bottom: .2rem;
   }
   .paragraph{
@@ -224,6 +248,14 @@ option:focus::placeholder {
   }
 
 }
+@media(max-width:390px){
+  .form-container{
+    padding: 4rem 0;
+  }
+  .close{
+    top: -3%;
+  }
+}
 @media(max-width:376px){
   html{
     font-size: 50%;
@@ -237,7 +269,9 @@ option:focus::placeholder {
     font-size: 1.6rem;
     padding-bottom: 1.5rem;
   }
- 
+  input, select{
+    margin: 7px 0;
+  }
   .logo{
     font-size: 1.3rem;
   }
