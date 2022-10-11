@@ -81,9 +81,6 @@ function submitForm() {
     hasAnswered: "yes",
   })
     .then(() => {
-      // alert("post added successfully");
-      // reset.click();
-      // errmsg.innerText = "";
       errmsg.innerText = "Post Added Succesfully";
     errmsg.style.display = 'block'
     errmsg.style.backgroundColor = 'green'
