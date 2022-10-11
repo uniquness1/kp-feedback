@@ -5,7 +5,8 @@ import {
   collection,
   addDoc,
   doc,
-  getDoc,
+  getDocs,
+  getFirestore,
 } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -35,6 +36,7 @@ let challenges = document.querySelector("#challenges");
 let solutions = document.querySelector("#improve");
 let submit = document.querySelector("#submit");
 let reset = document.querySelector("#clear");
+let errmsg = document.querySelector(".error");
 function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;
 }
@@ -48,7 +50,7 @@ function Validation() {
     isEmptyOrSpaces(challenges.placeholder) ||
     isEmptyOrSpaces(solutions.placeholder)
   ) {
-    alert("you cannot leave any field empty");
+    errmsg.innerText = "you cannot leave any field empty";
     // location.reload();
     return false;
   }
@@ -79,6 +81,7 @@ function submitForm() {
     .then(() => {
       alert("post added successfully");
       reset.click();
+      errmsg.innerText = "";
     })
     .catch((error) => {
       alert("error" + error);
