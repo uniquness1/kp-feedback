@@ -6,7 +6,6 @@ import {
   addDoc,
   doc,
   getDocs,
-  getFirestore,
 } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -45,13 +44,16 @@ function Validation() {
   if (
     isEmptyOrSpaces(work.value) ||
     isEmptyOrSpaces(fullName.value) ||
-    isEmptyOrSpaces(phoneNumber.placeholder) ||
-    isEmptyOrSpaces(workAdress.placeholder) ||
-    isEmptyOrSpaces(challenges.placeholder) ||
-    isEmptyOrSpaces(solutions.placeholder)
+    isEmptyOrSpaces(phoneNumber.value) ||
+    isEmptyOrSpaces(workAdress.value) ||
+    isEmptyOrSpaces(challenges.value) ||
+    isEmptyOrSpaces(solutions.value)
   ) {
     errmsg.innerText = "you cannot leave any field empty";
-    // location.reload();
+    errmsg.style.display = 'block'
+    setTimeout(() => {
+    errmsg.style.display = 'none'
+    }, "3000")
     return false;
   }
 
@@ -79,9 +81,15 @@ function submitForm() {
     hasAnswered: "yes",
   })
     .then(() => {
-      alert("post added successfully");
-      reset.click();
-      errmsg.innerText = "";
+      // alert("post added successfully");
+      // reset.click();
+      // errmsg.innerText = "";
+      errmsg.innerText = "Post Added Succesfully";
+    errmsg.style.display = 'block'
+    errmsg.style.backgroundColor = 'green'
+    setTimeout(() => {
+    errmsg.style.display = 'none'
+    }, "3000")
     })
     .catch((error) => {
       alert("error" + error);

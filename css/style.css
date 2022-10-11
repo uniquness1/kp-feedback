@@ -153,7 +153,28 @@ input[type=reset]{
 }
 input[type=submit]{
   background: #022144;
-
+}
+#submit{
+  background: #022144;
+  width: 20%;
+  line-height: 35px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+}
+.error{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  background: red;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  text-align: center;
+  display: none;
 }
 .form-content--1{
   text-align: end;
