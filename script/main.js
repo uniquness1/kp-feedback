@@ -106,15 +106,6 @@ function submitForm() {
     hasAnswered: "yes",
   })
     .then(() => {
-<<<<<<< HEAD
-    errmsg.innerText = "Post Added Succesfully";
-    errmsg.style.display = 'block'
-    errmsg.style.backgroundColor = 'green'
-    setTimeout(() => {
-    errmsg.style.display = 'none'
-    window.location.replace("index.html");
-    }, "3000")
-=======
       errmsg.innerText = "Post Added Succesfully";
       errmsg.style.display = "block";
       errmsg.style.backgroundColor = "green";
@@ -123,7 +114,6 @@ function submitForm() {
       setTimeout(() => {
         errmsg.style.display = "none";
       }, "3000");
->>>>>>> c2f0b16a737a25cea10aac1c65d54b2d61de4358
     })
     .catch((error) => {
       alert("error" + error);
