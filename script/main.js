@@ -4,6 +4,8 @@ import {
   getFirestore,
   collection,
   addDoc,
+  query,
+  where,
   doc,
   getDocs,
 } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
@@ -39,8 +41,19 @@ let errmsg = document.querySelector(".error");
 function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;
 }
+let alldata = [];
+const querySnapshot = await getDocs(collection(db, "StudentInfo"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  let info = doc.data();
+  // console.log(info.mobileNumber);
+  alldata.push(info.mobileNumber);
+});
+console.log(alldata);
 
 function Validation() {
+  let result = alldata.find((num) => num == phoneNumber.value);
+  console.log(result);
   if (
     isEmptyOrSpaces(work.value) ||
     isEmptyOrSpaces(fullName.value) ||
@@ -50,14 +63,26 @@ function Validation() {
     isEmptyOrSpaces(solutions.value)
   ) {
     errmsg.innerText = "you cannot leave any field empty";
-    errmsg.style.display = 'block'
-    setTimeout(() => {
-    errmsg.style.display = 'none'
-    }, "3000")
-    return false;
-  }
 
-  return true;
+    errmsg.style.display = "block";
+    setTimeout(() => {
+      errmsg.style.display = "none";
+    }, "3000");
+    return false;
+  } else if (result == phoneNumber.value) {
+    console.log("this user exists");
+    errmsg.innerText = "this user exists";
+
+    errmsg.style.display = "block";
+    setTimeout(() => {
+      errmsg.style.display = "none";
+    }, "3000");
+    return false;
+  } else {
+    console.log("this user has not filled the form");
+    console.log(result);
+    return true;
+  }
 }
 
 function submitForm() {
@@ -82,11 +107,13 @@ function submitForm() {
   })
     .then(() => {
       errmsg.innerText = "Post Added Succesfully";
-    errmsg.style.display = 'block'
-    errmsg.style.backgroundColor = 'green'
-    setTimeout(() => {
-    errmsg.style.display = 'none'
-    }, "3000")
+      errmsg.style.display = "block";
+      errmsg.style.backgroundColor = "green";
+      reset.click();
+      window.location.reload();
+      setTimeout(() => {
+        errmsg.style.display = "none";
+      }, "3000");
     })
     .catch((error) => {
       alert("error" + error);
