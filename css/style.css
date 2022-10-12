@@ -91,7 +91,7 @@ nav{
 }
 #pop-up{
   background: #fff;
-  width: 85%;
+  width: 80%;
   display: none;
   position: fixed;
   top: 50%;
@@ -99,7 +99,7 @@ nav{
   transform: translate(-50%, -50%);
   border-radius: .5rem;
   transition: .5s;
-  padding: 5rem;
+  /* padding: 0 10rem; */
   box-shadow:  0 0 10px #000;
   z-index: 2;
 }
@@ -110,7 +110,7 @@ nav{
 .close{
   position: absolute;
   top: 0;
-  right: 1%;
+  right: 5%;
   color: red;
   background: transparent;
   font-size: 2.5rem;
@@ -119,7 +119,7 @@ nav{
   cursor: pointer;
 }
 .form-container{
-  padding: 8rem 0;
+  padding: 5rem 10rem;
 }
 .form-content{
   display: flex;
@@ -138,8 +138,7 @@ input, select{
   color: #000;
   outline: none;
 }
-input[type=reset],
-input[type=submit]{
+input[type=reset]{
   width: 20%;
   line-height: 15px;
   border: none;
@@ -150,9 +149,6 @@ input[type=submit]{
 input[type=reset]{
   background: red;
   margin-right: 2rem;
-}
-input[type=submit]{
-  background: #022144;
 }
 #submit{
   background: #022144;
@@ -215,15 +211,34 @@ option:focus::placeholder {
 }
 
 /* media query/responsiveness */
+@media(max-width:1024px){
+  .form-container{
+    padding: 5rem 6rem;
+  }
+}
+@media(max-width:890px){
+  .form-container{
+    padding: 5rem 4rem;
+  }
+}
 @media (max-width: 812px){
   .container-1{
     padding: 0 5rem;
+  }
+  .form-container{
+    padding: 5rem 3rem;
   }
 }
 @media(max-width:765px){
   body,
   html{
     overflow-x: hidden;
+  }
+  .main-heading{
+    margin-top: 22rem;
+  }
+  .form-container{
+    padding: 2rem 2rem;
   }
   .form-content{
     flex-direction: column;
@@ -235,6 +250,24 @@ option:focus::placeholder {
   .container-1{
     padding: 0 2rem;
   }
+  .close{
+    top: -8%;
+    right: -3%;
+  }
+  input[type=reset],
+  #submit{
+    width: 40% !important;
+  }
+  .error{
+    top: -7%;
+    font-size: 1.5rem;
+  }
+  select{
+    line-height: 35px !important;
+  }
+  input, select{
+    margin: 7px 0;
+  }
 }
 @media(max-width:651px){
   .main-heading{
@@ -243,10 +276,13 @@ option:focus::placeholder {
   .paragraph{
     font-size: 2.5rem;
   }
+  .form-container{
+    padding:1.5rem 1rem;
+  }
 }
 @media(max-width:612px){
   html{
-    font-size: 55%;
+    font-size: 58%;
   }
   .container-1{
     padding: 0 1rem;
@@ -267,19 +303,10 @@ option:focus::placeholder {
   .contact{
     font-size: 1.1rem;
   }
-
-}
-@media(max-width:390px){
-  .form-container{
-    padding: 4rem 0;
-  }
-  .close{
-    top: -3%;
-  }
 }
 @media(max-width:376px){
   html{
-    font-size: 50%;
+    font-size: 57%;
   }
   .main-heading{
     font-size: 3rem;
@@ -290,14 +317,15 @@ option:focus::placeholder {
     font-size: 1.6rem;
     padding-bottom: 1.5rem;
   }
-  input, select{
-    margin: 7px 0;
-  }
+  
   .logo{
     font-size: 1.3rem;
   }
   .contact{
     font-size: 1rem;
+  }
+  .error{
+    top: -7%;
   }
 .heading{
     font-size: 3rem;
@@ -316,4 +344,10 @@ option:focus::placeholder {
     font-size: 1rem;
   }
 
+}
+@media(max-width:300px){
+  .error{
+    top: -7%;
+    font-size: 1.2rem;
+  }
 }

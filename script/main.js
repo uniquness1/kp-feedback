@@ -81,11 +81,12 @@ function submitForm() {
     hasAnswered: "yes",
   })
     .then(() => {
-      errmsg.innerText = "Post Added Succesfully";
+    errmsg.innerText = "Post Added Succesfully";
     errmsg.style.display = 'block'
     errmsg.style.backgroundColor = 'green'
     setTimeout(() => {
     errmsg.style.display = 'none'
+    window.location.replace("index.html");
     }, "3000")
     })
     .catch((error) => {
