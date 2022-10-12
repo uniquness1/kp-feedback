@@ -4,9 +4,6 @@ import {
   getFirestore,
   collection,
   addDoc,
-  query,
-  where,
-  doc,
   getDocs,
 } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
 
