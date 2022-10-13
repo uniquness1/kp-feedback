@@ -36,10 +36,7 @@ let submit = document.querySelector("#submit");
 let reset = document.querySelector("#clear");
 let errmsg = document.querySelector(".error");
 
-// student.addEventListener('change', ()=> {
-//   school.style.display = "block";
-//   workk.style.display = "none";
-// })
+
 work.addEventListener('change', function () {
   let school = document.querySelector("#school");
   let workk = document.querySelector("#work-1");
