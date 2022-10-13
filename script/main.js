@@ -119,5 +119,12 @@ function submitForm() {
 
 submit.addEventListener("click", () => submitForm());
 contact.addEventListener("click", function revert() {
-  window.location.replace("https://kinplusgroup.com/contact");
+  window.open("https://kinplusgroup.com/contact", "_blank");
+});
+reset.addEventListener("click", function clearData() {
+  fullName.value = "";
+  phoneNumber.value = "";
+  workAdress.value = "";
+  challenges.value = "";
+  solutions.value = "";
 });
