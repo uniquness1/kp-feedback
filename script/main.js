@@ -36,6 +36,22 @@ let submit = document.querySelector("#submit");
 let reset = document.querySelector("#clear");
 let errmsg = document.querySelector(".error");
 
+// student.addEventListener('change', ()=> {
+//   school.style.display = "block";
+//   workk.style.display = "none";
+// })
+work.addEventListener('change', function () {
+  let school = document.querySelector("#school");
+  let workk = document.querySelector("#work-1");
+  if (work.value == 'student') {
+    
+    school.style.display = "block";
+    workk.style.display = "none";
+  } else {
+    school.style.display = "none";
+    workk.style.display = "block";
+  } 
+ })
 
 function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;

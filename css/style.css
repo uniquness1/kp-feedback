@@ -1,33 +1,38 @@
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
-header{
+
+header {
   background: #022144;
   color: #fff;
   box-shadow: 0 0 10px #333333;
 }
-nav{
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem 5rem;
 }
-.logo{
+
+.logo {
   font-size: 2.5rem;
   text-decoration: none;
   color: #fff;
 }
-.contact{
+
+.contact {
   font-size: 1.5rem;
   background: transparent;
   padding: 1.5rem 4rem;
@@ -37,31 +42,37 @@ nav{
   cursor: pointer;
   transition: .5s;
 }
-.contact:hover{
+
+.contact:hover {
   background: #fff;
   color: #022144;
   border: .1rem solid #022144;
 }
-.container-1{
+
+.container-1 {
   margin: 10rem auto;
   padding: 0 10rem;
 }
-.hero{
+
+.hero {
   text-align: center;
   max-width: 120rem;
 }
-.main-heading{
+
+.main-heading {
   font-size: 8rem;
   font-weight: 800;
   padding-bottom: 2rem;
   color: #333333;
 }
+
 .paragraph {
   font-size: 3rem;
   font-weight: 500;
   padding: 3rem;
 }
-.btn-cta{
+
+.btn-cta {
   font-size: 1.5rem;
   background: #022144;
   padding: 1.5rem 4rem;
@@ -72,10 +83,12 @@ nav{
   cursor: pointer;
   transition: .5s;
 }
-.btn-cta:hover{
+
+.btn-cta:hover {
   background: #011c3b;
 }
-#overlay{
+
+#overlay {
   height: 110vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0.9);
@@ -87,10 +100,11 @@ nav{
   transition: .5s;
   padding: 0;
   margin: 0;
-  box-shadow:  0 0 10px #000;
+  box-shadow: 0 0 10px #000;
   z-index: 1;
 }
-#pop-up{
+
+#pop-up {
   background: #fff;
   width: 80%;
   display: none;
@@ -101,14 +115,16 @@ nav{
   border-radius: .5rem;
   transition: .5s;
   /* padding: 0 10rem; */
-  box-shadow:  0 0 10px #000;
+  box-shadow: 0 0 10px #000;
   z-index: 2;
 }
-#pop-up .container{
+
+#pop-up .container {
   position: relative;
   margin: 0;
 }
-.close{
+
+.close {
   position: absolute;
   top: 0;
   right: 5%;
@@ -119,15 +135,18 @@ nav{
   border: none;
   cursor: pointer;
 }
-.form-container{
+
+.form-container {
   padding: 5rem 10rem;
 }
-.form-content{
+
+.form-content {
   display: flex;
   /* align-items: center; */
   gap: 5rem;
 }
-input, select{
+
+input, select {
   width: 100%;
   padding: 1rem;
   border-radius: .5rem;
@@ -139,7 +158,8 @@ input, select{
   color: #000;
   outline: none;
 }
-input[type=reset]{
+
+input[type=reset] {
   width: 20%;
   line-height: 15px;
   border: none;
@@ -147,11 +167,15 @@ input[type=reset]{
   color: #fff;
   font-size: 1.5rem;
 }
-input[type=reset]{
+
+input[type=reset] {
   background: red;
   margin-right: 2rem;
 }
-#submit{
+
+#school {
+  display: none;
+}#submit {
   background: #022144;
   width: 20%;
   line-height: 35px;
@@ -161,7 +185,8 @@ input[type=reset]{
   font-size: 1.5rem;
   border-radius: .5rem;
 }
-.error{
+
+.error {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,36 +198,44 @@ input[type=reset]{
   text-align: center;
   display: none;
 }
-.form-content--1{
+
+.form-content--1 {
   text-align: end;
   margin-top: 3rem;
 }
-select{
+
+select {
   padding: 2rem 1rem;
 }
-select option{
+
+select option {
   color: #000;
   background: #fff;
   text-transform: capitalize;
 }
-::placeholder{
+
+::placeholder {
   color: #b9b9b9;
   font-size: 1.5rem;
   text-transform: capitalize;
 }
+
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input:focus,
-select:focus{
+select:focus {
   border: 1px solid #d5be8b;
 }
+
 input:focus::placeholder,
 select:focus::placeholder,
 option:focus::placeholder {
   color: #d5be8b;
 }
+
 .success input {
   border-color: #09c372;
 }
@@ -212,142 +245,176 @@ option:focus::placeholder {
 }
 
 /* media query/responsiveness */
-@media(max-width:1024px){
-  .form-container{
+@media(max-width:1024px) {
+  .form-container {
     padding: 5rem 6rem;
   }
 }
-@media(max-width:890px){
-  .form-container{
+
+@media(max-width:890px) {
+  .form-container {
     padding: 5rem 4rem;
   }
 }
-@media (max-width: 812px){
-  .container-1{
+
+@media (max-width: 812px) {
+  .container-1 {
     padding: 0 5rem;
   }
-  .form-container{
+
+  .form-container {
     padding: 5rem 3rem;
   }
 }
-@media(max-width:765px){
+
+@media(max-width:765px) {
+
   body,
-  html{
+  html {
     overflow-x: hidden;
   }
-  .main-heading{
+
+  .main-heading {
     margin-top: 22rem;
   }
-  .form-container{
+
+  .form-container {
     padding: 2rem 2rem;
   }
-  .form-content{
+
+  .form-content {
     flex-direction: column;
     gap: .5rem;
   }
-  #pop-up{
+
+  #pop-up {
     padding: 5rem 2rem;
   }
-  .container-1{
+
+  .container-1 {
     padding: 0 2rem;
   }
-  .close{
+
+  .close {
     top: -8%;
     right: -3%;
   }
+
   input[type=reset],
-  #submit{
+  #submit {
     width: 40% !important;
   }
-  .error{
+
+  .error {
     top: -7%;
     font-size: 1.5rem;
   }
-  select{
+
+  select {
     line-height: 35px !important;
   }
-  input, select{
+
+  input, select {
     margin: 7px 0;
   }
 }
-@media(max-width:651px){
-  .main-heading{
+
+@media(max-width:651px) {
+  .main-heading {
     font-size: 6rem;
   }
-  .paragraph{
+
+  .paragraph {
     font-size: 2.5rem;
   }
-  .form-container{
-    padding:1.5rem 1rem;
+
+  .form-container {
+    padding: 1.5rem 1rem;
   }
 }
-@media(max-width:612px){
-  html{
+
+@media(max-width:612px) {
+  html {
     font-size: 58%;
   }
-  .container-1{
+
+  .container-1 {
     padding: 0 1rem;
   }
-  .main-heading{
+
+  .main-heading {
     font-size: 4rem;
     padding-bottom: .2rem;
   }
-  .paragraph{
+
+  .paragraph {
     font-size: 1.8rem;
   }
-  nav{
+
+  nav {
     padding: 3rem 2rem;
   }
-  .logo{
+
+  .logo {
     font-size: 2rem;
   }
-  .contact{
+
+  .contact {
     font-size: 1.1rem;
   }
 }
-@media(max-width:376px){
-  html{
+
+@media(max-width:376px) {
+  html {
     font-size: 57%;
   }
-  .main-heading{
+
+  .main-heading {
     font-size: 3rem;
     padding-bottom: .1rem;
   }
-  .paragraph{
+
+  .paragraph {
     padding-top: -.5rem;
     font-size: 1.6rem;
     padding-bottom: 1.5rem;
   }
-  
-  .logo{
+
+  .logo {
     font-size: 1.3rem;
   }
-  .contact{
+
+  .contact {
     font-size: 1rem;
   }
-  .error{
+
+  .error {
     top: -7%;
   }
-.heading{
+
+  .heading {
     font-size: 3rem;
     padding-bottom: .1rem;
   }
-  .paragraph{
+
+  .paragraph {
     padding-top: -.5rem;
     font-size: 1.6rem;
     padding-bottom: 1.5rem;
   }
- 
-  .logo{
+
+  .logo {
     font-size: 1.3rem;
   }
-  .contact{
+
+  .contact {
     font-size: 1rem;
   }
 
 }
-@media(max-width:300px){
-  .error{
+
+@media(max-width:300px) {
+  .error {
     top: -7%;
     font-size: 1.2rem;
   }
