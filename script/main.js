@@ -35,6 +35,8 @@ let solutions = document.querySelector("#improve");
 let submit = document.querySelector("#submit");
 let reset = document.querySelector("#clear");
 let errmsg = document.querySelector(".error");
+
+
 function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;
 }
