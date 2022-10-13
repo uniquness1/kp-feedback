@@ -57,6 +57,9 @@
                                     id="fullname"/>
                                 <input
                                     type="number"
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+
+                                    maxlength="11"
                                     placeholder="Mobile Number:"
                                     required="required"
                                     name="number"
@@ -93,7 +96,7 @@
                                     id="work-1"/>
                                 <input class="none"
                                     type="text"
-                                    placeholder="State of deployment"
+                                    placeholder="Address of PPA"
                                     required="required"
                                     name="serve"
                                     id="services"/>
