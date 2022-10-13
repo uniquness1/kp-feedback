@@ -173,9 +173,11 @@ input[type=reset] {
   margin-right: 2rem;
 }
 
-#school {
+#school, .none {
   display: none;
-}#submit {
+}
+
+#submit {
   background: #022144;
   width: 20%;
   line-height: 35px;

@@ -42,7 +42,7 @@
             <div id="overlay"></div>
             <div id="pop-up">
                 <div class="container">
-                    <button class="close">X</button>
+                    <button class="close"><i class="fa-solid fa-xmark"></i></button>
                     <div class="form-container">
                         <div id="form">
 
@@ -66,7 +66,7 @@
                             <div class="form-content">
                                 <select name="work" id="work">
                                     <option selected="selected" disabled="disabled" value="null">
-                                        Please select an option
+                                        Select employment status
                                     </option>
                                     <option id="student" value="student">Student</option>
                                     <option value="corper">Corper</option>
@@ -75,7 +75,7 @@
                                 </select>
                                 <select name="school" id="school">
                                     <option selected="selected" disabled="disabled" value="null">
-                                       Select an option
+                                       Select institution
                                     </option>
                                     <option value="eksu">Ekiti State University</option>
                                     <option value="fuoye">Federal University of Oye-Ekiti</option>
@@ -85,12 +85,18 @@
                                     <option value="others">Others</option>
                                 </select>
                                 <!-- <p class="error"></p> -->
-                                <input
+                                <input class="none"
                                     type="text"
-                                    placeholder="Place of Work/institution"
+                                    placeholder="Place of Work"
                                     required="required"
                                     name="work"
                                     id="work-1"/>
+                                <input class="none"
+                                    type="text"
+                                    placeholder="State of deployment"
+                                    required="required"
+                                    name="serve"
+                                    id="services"/>
                                 <!-- <p class="error"></p> -->
                             </div>
                             <div class="form-content">
@@ -117,7 +123,7 @@
                         </div>
                     </div>
                 </section>
-
+<script src="https://kit.fontawesome.com/dff98c45d4.js" crossorigin="anonymous"></script>
                 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
                 <script>
                     AOS.init();
