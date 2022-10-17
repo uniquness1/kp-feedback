@@ -90,7 +90,6 @@ function Validation() {
     isEmptyOrSpaces(work.value) ||
     isEmptyOrSpaces(fullName.value) ||
     isEmptyOrSpaces(phoneNumber.value) ||
-    isEmptyOrSpaces(workAdress.value) ||
     isEmptyOrSpaces(challenges.value) ||
     isEmptyOrSpaces(solutions.value)
   ) {
