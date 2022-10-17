@@ -30,41 +30,45 @@ let work = document.querySelector("#work");
 let fullName = document.querySelector("#fullname");
 let phoneNumber = document.querySelector("#number");
 let workAdress = document.querySelector("#work-1");
+let school = document.querySelector("#school");
+let studentLevel = document.querySelector("#level");
 let challenges = document.querySelector("#challenges");
 let solutions = document.querySelector("#improve");
 let submit = document.querySelector("#submit");
 let reset = document.querySelector("#clear");
 let errmsg = document.querySelector(".error");
 
-
-work.addEventListener('change', function () {
+work.addEventListener("change", function () {
   let school = document.querySelector("#school");
   let workk = document.querySelector("#work-1");
   let services = document.querySelector("#services");
-  if (work.value == 'student') {
-    
+
+  if (work.value == "student") {
     school.style.display = "block";
+    studentLevel.style.display = "block";
     workk.style.display = "none";
     services.style.display = "none";
-  } 
-    if (work.value == 'unemployed') {
-      school.style.display = "none";
-      workk.style.display = "none";
-      services.style.display = "none";
-    }
-  
-  
-  if (work.value == 'corper') {
+  }
+  if (work.value == "unemployed") {
     school.style.display = "none";
+    studentLevel.style.display = "none";
+    workk.style.display = "none";
+    services.style.display = "none";
+  }
+
+  if (work.value == "corper") {
+    school.style.display = "none";
+    studentLevel.style.display = "none";
     workk.style.display = "none";
     services.style.display = "block";
   }
-  if (work.value == 'employed') {
+  if (work.value == "employed") {
     school.style.display = "none";
+    studentLevel.style.display = "none";
     workk.style.display = "block";
     services.style.display = "none";
-  } 
- })
+  }
+});
 
 function isEmptyOrSpaces(str) {
   return str === null || str.match(/^ *$/) !== null;
@@ -129,6 +133,8 @@ function submitForm() {
     occupation: work.value,
     mobileNumber: phoneNumber.value,
     address: workAdress.value,
+    school: school.value,
+    level: studentLevel.value,
     problems: challenges.value,
     Solutions: solutions.value,
     hasAnswered: "yes",
