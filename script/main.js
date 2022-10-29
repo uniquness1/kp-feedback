@@ -78,14 +78,13 @@ const querySnapshot = await getDocs(collection(db, "StudentInfo"));
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
   let info = doc.data();
-  // console.log(info.mobileNumber);
+
   alldata.push(info.mobileNumber);
 });
-console.log(alldata);
 
 function Validation() {
   let result = alldata.find((num) => num == phoneNumber.value);
-  console.log(result);
+
   if (
     isEmptyOrSpaces(work.value) ||
     isEmptyOrSpaces(fullName.value) ||
@@ -101,7 +100,6 @@ function Validation() {
     }, "3000");
     return false;
   } else if (result == phoneNumber.value) {
-    console.log("this user exists");
     errmsg.innerText = "this user exists";
 
     errmsg.style.display = "block";
@@ -110,8 +108,6 @@ function Validation() {
     }, "3000");
     return false;
   } else {
-    console.log("this user has not filled the form");
-    console.log(result);
     return true;
   }
 }

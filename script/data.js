@@ -25,7 +25,7 @@ const querySnapshot = await getDocs(collection(db, "StudentInfo"));
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
   let info = doc.data();
-  console.log(info);
+
   let time = new Date(info.entrytime).toDateString();
   studentData.innerHTML += `
   <tr>
